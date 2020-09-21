@@ -1,0 +1,21 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: myrs
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      env: dev
+      admin: aslam
+  template:
+    metadata:
+      labels:
+        env: dev
+        admin: aslam
+    spec:
+      containers:
+      - name: conto
+        image: alpine
+        ports:
+        - containerPort: 80
