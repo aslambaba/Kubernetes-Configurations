@@ -1,0 +1,20 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mypod-withlivenessprob
+spec:
+  containers:
+  - name: yoo
+    image: aamirpinger/helloworld
+    ports:
+    - containerPort: 80
+    livenessProbe:
+      exec:
+        command:
+        - cat
+          abc.txt
+      failureThreshold: 4
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 10
+      initialDelaySeconds: 10

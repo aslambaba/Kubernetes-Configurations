@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: podbybaba
+  labels:
+    env: dev
+    admin: aslam
+spec:
+  containers:
+  - name: 91r
+    image: aamirpinger/helloworld
+    ports:
+    - containerPort: 80

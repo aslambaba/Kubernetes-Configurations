@@ -1,0 +1,17 @@
+kind: CornJob
+apiVersion: batch/v2beta1
+metadata:
+  name: mycornjob
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers: 
+          - name: cjobconto
+            image: docker/whalesay
+            command: ["cowsay","This is CornJob Resource By Aslam Baba"]
+          restartPolicy: Never
+      backoffLimit: 2
+      activeDeadlineSeconds: 120

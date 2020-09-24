@@ -1,0 +1,2 @@
+kubectl expose rs myrs-with-yamlfile --name=mylib --port=8000
+--target-port=80 --type=LoadBalancer --selector=admin=aslam
