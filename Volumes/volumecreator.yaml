@@ -13,11 +13,11 @@ spec:
     - containerPort: 80
     volumeMounts:
     - name: secretfiles
-      mountPath: /logoo
+      mountPath: /fileone
   - name: conto2
     image: aamirpinger/helloworld
     ports:
     - containerPort: 80
     volumeMounts:
     - name: secretfiles
-      mountPath: /hworld/lon
+      mountPath: /filetwo/filethree
