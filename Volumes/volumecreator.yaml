@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: pod-with-volume
+spec:
+  volumes:
+  - name: secretfiles
+    emptyDir: {}
+  containers:
+  - name: conto1
+    image: aamirpinger/logfile_nodejs
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: secretfiles
+      mountPath: /logoo
+  - name: conto2
+    image: aamirpinger/helloworld
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: secretfiles
+      mountPath: /hworld/lon
