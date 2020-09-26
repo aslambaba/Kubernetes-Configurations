@@ -5,4 +5,4 @@ Kubernetes All Yaml File configurations.
 ### Download Minikube for your local pc
 
 #### Command to run resource in kubernetes
-##### kubectl create -f <file-name>
+kubectl create -f <file-name>
